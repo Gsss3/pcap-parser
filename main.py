@@ -24,7 +24,7 @@ def geoloc(ip):
             geoloc = country
         return geoloc
     except:
-        print(Fore.RED+"Not Found")
+        print(Fore.RED+"Not Found"+Fore.RESET)
         print('\033[39m')
         
 def parser(pcapfile):
@@ -36,8 +36,8 @@ def parser(pcapfile):
             src = socket.inet_ntoa(ip.src)
             dst = socket.inet_ntoa(ip.dst)
             
-            print(Fore.CYAN+"[+] Src: {} --> Dst: {}".format(src,dst))
-            print(Fore.YELLOW+"[+] Src: " + geoloc(src) + " --> Dst: " + geoloc(dst))
+            print(Back.CYAN+f"[+] Src: {src} --> Dst: {dst}"+Back.RESET)
+            print(Back.YELLOW+"[+] Src: " + geoloc(src) + " --> Dst: " + geoloc(dst)+Back.RESET)
             print('\033[39m')
 
         except:
