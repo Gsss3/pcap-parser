@@ -15,7 +15,7 @@ p.add_option('-p', dest='pcap', type='string',help='Pcap file for parsing')
 pcap = options.pcap
 
 def keyboardInterruptHandler(signal, frame):
-    print("\nkilled.".format(signal))
+    print("\nKilled.".format(signal))
     exit(0)
 
 signal.signal(signal.SIGINT, keyboardInterruptHandler)
